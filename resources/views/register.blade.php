@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>create acount</h1><br>
-    <form action="/register">
+    <form action="/register" method="post">
         @csrf
         <input type="text" name="name" placeholder="username" required><br>
         <input type="email" name="email" placeholder="email" required><br>
