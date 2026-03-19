@@ -16,8 +16,9 @@ class UserController extends Controller
         return view('register');
     }
 
-   public function page(){
-        if(!Session::has('user')){
+    public function page()
+    {
+        if (!Session::has('user')) {
             return redirect('login');
         }
 
@@ -51,7 +52,8 @@ class UserController extends Controller
         return back()->with('error', 'Invalid email or password');
     }
 
-       public function logout(){
+    public function logout()
+    {
         Session::forget('user');
         return redirect('login');
     }
