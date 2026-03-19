@@ -14,7 +14,7 @@
     <p>Hello, {{ session('user')->name }}</p>
     @endif
 
-    <form method="POST" action="/logout">
+    <form method="post" action="/logout">
         @csrf
         <button type="submit">Logout</button>
     </form>

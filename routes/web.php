@@ -10,4 +10,4 @@ Route::get('login', [UserController::class, 'showLogin']);
 Route::post('login', [UserController::class, 'login']);
 
 Route::get('page', [UserController::class, 'page']);
-Route::get('logout', [UserController::class, 'logout']);
+Route::post('logout', [UserController::class, 'logout']);
