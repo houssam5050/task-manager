@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
     <title>login</title>
 </head>
 <body>
+    <x-navbar></x-navbar>
     @if(session('error'))
     <p style="color:red;">{{ session('error') }}</p>
 @endif
@@ -16,7 +18,7 @@
     <input type="password" name="password" placeholder="password" required><br>
     <button type="submit">Login</button>
     <br>
-    <a href="/register">create acount</a>
+   
 </form>
 </body>
 </html>

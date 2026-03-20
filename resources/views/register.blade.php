@@ -6,6 +6,7 @@
     <title>sign up</title>
 </head>
 <body>
+    <x-navbar></x-navbar>
     <h1>create acount</h1><br>
     <form action="/register" method="post">
         @csrf
@@ -13,7 +14,7 @@
         <input type="email" name="email" placeholder="email" required><br>
         <input type="password" name="password" placeholder="password" required><br>
         <button type="submit">save</button><br>
-        <a href="/login">Login</a>
+      
 
 
 
