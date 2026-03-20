@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>navbar</title>
-    <!-- Bootstrap 5.3 CSS (same as original, keeps integrity) -->
+   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Font Awesome 6 (free) for subtle icons – enhances visual without clutter -->
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* custom polish: modern gradient, softer shadows, refined active states */
         .navbar.navbar-improved {
             background: linear-gradient(135deg, #f8f9ff 0%, #eef1fa 100%);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 40, 80, 0.05);
@@ -18,7 +17,6 @@
             padding-bottom: 0.7rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(2px);
-            /* subtle glass touch */
             transition: all 0.2s ease;
         }
 
@@ -49,7 +47,6 @@
             color: #1D267D;
         }
 
-        /* nav links with modern spacing & indicators */
         .navbar-improved .navbar-nav .nav-link {
             font-weight: 500;
             font-size: 1.1rem;
@@ -68,7 +65,6 @@
             transition: color 0.2s;
         }
 
-        /* hover / active modern effects */
         .navbar-improved .navbar-nav .nav-link:hover {
             background-color: rgba(45, 85, 255, 0.08);
             color: #1D267D;
@@ -89,7 +85,6 @@
             color: #1f2a6b;
         }
 
-        /* toggler refinement (preserve bootstrap but match aesthetics) */
         .navbar-improved .navbar-toggler {
             border: 1px solid rgba(45, 85, 255, 0.2);
             background: rgba(255, 255, 255, 0.5);
@@ -106,12 +101,10 @@
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(30, 40, 100, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
 
-        /* optional divider and cta style for login/signup */
         .navbar-improved .nav-item:last-child .nav-link {
             margin-right: 0;
         }
 
-        /* subtle background glow for collapsed menu on mobile */
         @media (max-width: 991.98px) {
             .navbar-improved .navbar-collapse {
                 background: rgba(255, 255, 255, 0.7);
@@ -129,7 +122,6 @@
             }
         }
 
-        /* small extra: brand icon animation */
         .navbar-improved .navbar-brand i {
             transition: transform 0.2s;
         }
@@ -138,13 +130,11 @@
             transform: rotate(8deg) scale(1.05);
         }
 
-        /* adjust body background to appreciate soft navbar – just for demo */
         body {
             background: #f9fafc;
             min-height: 100vh;
         }
 
-        /* optional container-fluid spacing fine-tune */
         .navbar-improved .container-fluid {
             padding-left: 5%;
             padding-right: 5%;
@@ -157,7 +147,6 @@
 
     <nav class="navbar navbar-expand-lg navbar-improved">
         <div class="container-fluid">
-            <!-- brand with icon -->
             <a class="navbar-brand" href="/">
                 <i class="fas fa-check-double"></i> Task Manager
             </a>
@@ -190,10 +179,6 @@
             </div>
         </div>
     </nav>
-
-
-
-
+    
 </body>
-
 </html>
