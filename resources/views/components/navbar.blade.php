@@ -166,12 +166,13 @@
     </li>
 
     @if(session('user'))
-        <!-- Logged in -->
+        <a href="/page">
         <li class="nav-item">
             <span class="nav-link">
                 <i class="fas fa-user"></i> {{ session('user')->name }}
             </span>
         </li>
+        </a>
 
         <li class="nav-item">
             <form method="POST" action="/logout" style="display:inline;">
@@ -183,7 +184,7 @@
         </li>
 
     @else
-        <!-- Not logged in -->
+        
         <li class="nav-item">
             <a class="nav-link" href="/login">
                 <i class="fas fa-sign-in-alt"></i> Login
