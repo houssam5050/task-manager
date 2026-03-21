@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>navbar</title>
-   
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-   
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-   <style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
         .navbar.navbar-improved {
             background: linear-gradient(135deg, #f8f9ff 0%, #eef1fa 100%);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 40, 80, 0.05);
@@ -140,6 +140,13 @@
             padding-left: 5%;
             padding-right: 5%;
         }
+
+        .link-btn{
+            text-decoration: none;
+        }
+        .link-btn:active{
+            transform: scale(0.98);
+        }
     </style>
 </head>
 
@@ -158,51 +165,52 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-               <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto">
 
-    <li class="nav-item">
-        <a class="nav-link active" href="#">
-            <i class="fas fa-info-circle"></i> About Us
-        </a>
-    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="fas fa-info-circle"></i> About Us
+                        </a>
+                    </li>
 
-    @if(session('user'))
-        <a href="/page">
-        <li class="nav-item">
-            <span class="nav-link">
-                <i class="fas fa-user"></i> {{ session('user')->name }}
-            </span>
-        </li>
-        </a>
+                    @if(session('user'))
+                    <a href="/page" class="link-btn">
+                        <li class="nav-item">
+                            <span class="nav-link">
+                                <i class="fas fa-user"></i> {{ session('user')->name }}
+                            </span>
+                        </li>
+                    </a>
 
-        <li class="nav-item">
-            <form method="POST" action="/logout" style="display:inline;">
-                @csrf
-                <button type="submit" class="nav-link" style="border:none; background:none;">
-                    <i class="fas fa-sign-out-alt"></i> Logout
-                </button>
-            </form>
-        </li>
+                    <li class="nav-item">
+                        <form method="POST" action="/logout" style="display:inline;">
+                            @csrf
+                            <button type="submit" class="nav-link" style="border:none; background:none;">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </button>
+                        </form>
+                    </li>
 
-    @else
-        
-        <li class="nav-item">
-            <a class="nav-link" href="/login">
-                <i class="fas fa-sign-in-alt"></i> Login
-            </a>
-        </li>
+                    @else
 
-        <li class="nav-item">
-            <a class="nav-link" href="/register">
-                <i class="fas fa-user-plus"></i> Sign Up
-            </a>
-        </li>
-    @endif
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </a>
+                    </li>
 
-</ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">
+                            <i class="fas fa-user-plus"></i> Sign Up
+                        </a>
+                    </li>
+                    @endif
+
+                </ul>
             </div>
         </div>
     </nav>
 
 </body>
+
 </html>

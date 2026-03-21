@@ -145,19 +145,18 @@
             transition: all 0.25s ease;
         }
 
-        /* ICON SPACE */
         .cta-btn i {
             margin-right: 8px;
         }
 
-        /* HOVER EFFECT */
+        
         .cta-btn:hover {
             transform: translateY(-4px) scale(1.03);
             box-shadow: 0 15px 35px rgba(92, 70, 156, 0.6);
             background: linear-gradient(135deg, #4c3a87, #667eea);
         }
 
-        /* CLICK EFFECT */
+        
         .cta-btn:active {
             transform: scale(0.98);
         }
