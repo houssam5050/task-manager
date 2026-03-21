@@ -115,6 +115,38 @@
         .extra-links a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
+            .login-container {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+            }
+
+            .login-card {
+                background: white;
+                padding: 1.5rem 1rem;
+                border-radius: 20px;
+                width: 100%;
+                max-width: 400px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+
+            .login-card h1 {
+                margin-bottom: 0.5rem;
+                font-size: 1rem;
+                color: #1d267d;
+            }
+
+
+        }
     </style>
 </head>
 
@@ -157,7 +189,7 @@
 
         </div>
     </div>
-<x-footer></x-footer>
+    <x-footer></x-footer>
 </body>
 
 </html>
