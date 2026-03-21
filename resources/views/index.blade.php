@@ -190,7 +190,6 @@
 
     </div>
 
-    <!-- IMAGES -->
     <div class="images">
         <div class="img-box">📋</div>
         <div class="img-box">⏰</div>
@@ -198,7 +197,6 @@
         <div class="img-box">✅</div>
     </div>
 
-    <!-- CTA -->
     <div class="cta">
         ✨ Control your life details — start today
     </div>

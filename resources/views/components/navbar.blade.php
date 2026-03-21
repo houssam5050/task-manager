@@ -157,28 +157,50 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+               <ul class="navbar-nav ms-auto">
 
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">
-                            <i class="fas fa-info-circle"></i> About Us
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">
-                            <i class="fas fa-sign-in-alt"></i> Login
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/register">
-                            <i class="fas fa-user-plus"></i> Sign Up
-                        </a>
-                    </li>
-                </ul>
+    <li class="nav-item">
+        <a class="nav-link active" href="#">
+            <i class="fas fa-info-circle"></i> About Us
+        </a>
+    </li>
 
+    @if(session('user'))
+        <!-- Logged in -->
+        <li class="nav-item">
+            <span class="nav-link">
+                <i class="fas fa-user"></i> {{ session('user')->name }}
+            </span>
+        </li>
+
+        <li class="nav-item">
+            <form method="POST" action="/logout" style="display:inline;">
+                @csrf
+                <button type="submit" class="nav-link" style="border:none; background:none;">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </form>
+        </li>
+
+    @else
+        <!-- Not logged in -->
+        <li class="nav-item">
+            <a class="nav-link" href="/login">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/register">
+                <i class="fas fa-user-plus"></i> Sign Up
+            </a>
+        </li>
+    @endif
+
+</ul>
             </div>
         </div>
     </nav>
-    
+
 </body>
 </html>
