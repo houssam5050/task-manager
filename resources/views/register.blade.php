@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +33,7 @@
             border-radius: 20px;
             width: 100%;
             max-width: 420px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
@@ -71,7 +72,7 @@
         .form-group input:focus {
             outline: none;
             border-color: #5c469c;
-            box-shadow: 0 0 0 3px rgba(92,70,156,0.2);
+            box-shadow: 0 0 0 3px rgba(92, 70, 156, 0.2);
         }
 
         .register-btn {
@@ -89,7 +90,7 @@
 
         .register-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
 
         .extra-links {
@@ -120,50 +121,51 @@
 
 <body>
 
-<x-navbar></x-navbar>
+    <x-navbar></x-navbar>
 
-<div class="register-container">
-    <div class="register-card">
+    <div class="register-container">
+        <div class="register-card">
 
-        <h1><i class="fas fa-user-plus"></i> Create Account</h1>
-        <p>Start managing your life and tasks today</p>
+            <h1><i class="fas fa-user-plus"></i> Create Account</h1>
+            <p>Start managing your life and tasks today</p>
 
-        {{-- Example error block (optional if you use validation) --}}
-        @if($errors->any())
+            {{-- Example error block (optional if you use validation) --}}
+            @if($errors->any())
             <div class="error">
                 {{ $errors->first() }}
             </div>
-        @endif
+            @endif
 
-        <form action="/register" method="post">
-            @csrf
+            <form action="/register" method="post">
+                @csrf
 
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="name" placeholder="Enter your name" required>
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Create a password" required>
+                </div>
+
+                <button type="submit" class="register-btn">
+                    <i class="fas fa-user-check"></i> Register
+                </button>
+            </form>
+
+            <div class="extra-links">
+                <a href="/login">Login</a>
             </div>
 
-            <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" placeholder="Enter your email" required>
-            </div>
-
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" placeholder="Create a password" required>
-            </div>
-
-            <button type="submit" class="register-btn">
-                <i class="fas fa-user-check"></i> Register
-            </button>
-        </form>
-
-        <div class="extra-links">
-            Already have an account? <a href="/login">Login</a>
         </div>
-
     </div>
-</div>
-<x-footer></x-footer>
+    <x-footer></x-footer>
 </body>
+
 </html>

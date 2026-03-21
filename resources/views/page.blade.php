@@ -8,16 +8,9 @@
 </head>
 
 <body>
-    <h2>Welcome</h2>
+<x-navbar></x-navbar>
 
-    @if(session('user'))
-    <p>Hello, {{ session('user')->name }}</p>
-    @endif
 
-    <form method="post" action="/logout">
-        @csrf
-        <button type="submit">Logout</button>
-    </form>
 
 </body>
 
