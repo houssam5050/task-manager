@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer-container">
 
-        <!-- About -->
+        
         <div class="footer-section">
             <h3>Task Manager</h3>
             <p>
@@ -12,14 +12,14 @@
             </p>
         </div>
 
-        <!-- Contact -->
+       
         <div class="footer-section">
             <h4>Contact</h4>
-            <p><i class="fas fa-envelope"></i> hussam56@gmail.com</p>
-            <p><i class="fas fa-phone"></i> 06562527</p>
+            <p><i class="fas fa-envelope"></i> hossamhamdan4545@gmail.com</p>
+            <p><i class="fas fa-phone"></i> 0613350256</p>
         </div>
 
-        <!-- More -->
+       
         <div class="footer-section">
             <h4>More</h4>
             <p><i class="fas fa-check"></i> Easy task tracking</p>
