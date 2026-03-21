@@ -126,7 +126,6 @@
     <div class="login-card">
 
         <h1><i class="fas fa-user-circle"></i> Welcome Back</h1>
-        <p>Login to manage your tasks and control your life</p>
 
         @if(session('error'))
             <div class="error">
