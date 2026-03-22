@@ -23,13 +23,13 @@
             padding: 2rem;
         }
 
-        /* HERO */
         .hero {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             gap: 2rem;
             margin-top: 2rem;
+            padding: 20px;
         }
 
         .hero-text {
@@ -131,7 +131,7 @@
             text-align: center;
         }
 
-        /* BUTTON STYLE */
+
         .cta-btn {
             display: inline-block;
             background: linear-gradient(135deg, #5c469c, #7f9cf5);
@@ -149,14 +149,14 @@
             margin-right: 8px;
         }
 
-        
+
         .cta-btn:hover {
             transform: translateY(-4px) scale(1.03);
             box-shadow: 0 15px 35px rgba(92, 70, 156, 0.6);
             background: linear-gradient(135deg, #4c3a87, #667eea);
         }
 
-        
+
         .cta-btn:active {
             transform: scale(0.98);
         }
