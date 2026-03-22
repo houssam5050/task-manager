@@ -36,6 +36,12 @@
 </footer>
 
 <style>
+    body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .footer {
     background: #1f2a44;
     color: #e4e8f0;
@@ -45,12 +51,14 @@
 
 .footer-container {
     max-width: 1200px;
+    max-height: 100%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     padding: 0 2rem 2rem;
     justify-content: space-between;
+    
 }
 
 .footer-section {
