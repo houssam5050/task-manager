@@ -14,6 +14,10 @@ class UserController extends Controller
         return view('index');
     }
 
+    public function intro(){
+        return view('intro');
+    }
+
     public function create()
     {
 
