@@ -257,7 +257,7 @@
 </head>
 
 <body>
-
+<!-- bav -->
     <x-navbar></x-navbar>
 
     <div class="container">
