@@ -8,7 +8,7 @@
 </head>
 
 <body>
-
+<x-sidebar></x-sidebar>
 </body>
 
 </html>
