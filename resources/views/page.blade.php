@@ -9,11 +9,7 @@
 
 <body>
     <x-navbar></x-navbar>
-    <h2>Welcome</h2>
-
-    @if(session('user'))
-    <p>Hello, {{ session('user')->name }}</p>
-    @endif
+    
 
 </body>
 
