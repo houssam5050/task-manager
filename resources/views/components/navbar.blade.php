@@ -196,13 +196,13 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="/login">
-                            <i class="fas fa-sign-in-alt"></i> Login
+                            <i class="fas fa-sign-in-alt"></i> Sign in
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="/register">
-                            <i class="fas fa-user-plus"></i> Sign Up
+                            <i class="fas fa-user-plus"></i> Sign up
                         </a>
                     </li>
                     @endif
