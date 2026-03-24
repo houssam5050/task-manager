@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <x-navebar></x-navebar>
 </body>
 
 </html>
