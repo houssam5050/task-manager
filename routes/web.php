@@ -22,3 +22,6 @@ Route::post('logout', [UserController::class, 'logout']);
 
 //dashboad
 
+
+Route::get('create', [DboardController::class, 'create']);
+Route::post('store', [DboardController::class, 'store']);
