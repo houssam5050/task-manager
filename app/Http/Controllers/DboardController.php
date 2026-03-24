@@ -20,7 +20,12 @@ class DboardController extends Controller
 
     public function store(Request $request){
         DB::table('dashboard')->insert([
-            
+            'id'=> $request->id,
+            'title'=> $request->title,
+            'description'=> $request->description,
+            'date'=> $request->date,
+            'status'=> $request->status
         ]);
+        return redirect('/dashboard');
     }
 }
