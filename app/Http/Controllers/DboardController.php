@@ -33,4 +33,14 @@ class DboardController extends Controller
         $dboards = DB::table('dashboard')->where('id', $id)->first();
         return view('edit');
     }
+
+    public function update(Request $request, $id){
+        DB::table('dashboard')->where('id', $id)->update([
+            'title'=> $request->title,
+            'description'=> $request->descreption,
+            'date'=> $request->date,
+            'status'=> $request->status
+        ]);
+        return redirect('dashboad');
+    }
 }
