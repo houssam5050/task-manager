@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
+//users
 Route::get('/', [UserController::class, 'index']);
 
 Route::get('register', [UserController::class, 'create']);
@@ -14,3 +15,7 @@ Route::post('login', [UserController::class, 'login']);
 Route::get('page', [UserController::class, 'page']);
 Route::get('intro', [UserController::class, 'intro']);
 Route::post('logout', [UserController::class, 'logout']);
+
+
+
+//dashboad
