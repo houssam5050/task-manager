@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DboardController;
 
 //users
+
 Route::get('/', [UserController::class, 'index']);
 
 Route::get('register', [UserController::class, 'create']);
@@ -19,3 +21,4 @@ Route::post('logout', [UserController::class, 'logout']);
 
 
 //dashboad
+
