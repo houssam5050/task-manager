@@ -31,7 +31,7 @@ class UserController extends Controller
             return redirect('login');
         }
 
-        return view('page');
+        return view('dashboard');
     }
 
     public function store(Request $request)
@@ -55,7 +55,7 @@ class UserController extends Controller
 
         if ($user && Hash::check($request->password, $user->password)) {
             Session::put('user', $user);
-            return redirect('page');
+            return redirect('dashboard');
         }
 
         return back()->with('error', 'Invalid email or password');

@@ -325,7 +325,7 @@
 
         <div class="cta">
             @if(session('user'))
-            <a href="/page" class="cta-btn">
+            <a href="/dashboard" class="cta-btn">
                 <i class="fas fa-tasks"></i> Go to your dashboard
             </a>
             @else

@@ -175,7 +175,7 @@
                     </li>
 
                     @if(session('user'))
-                    <a href="/page" class="link-btn">
+                    <a href="/dashboard" class="link-btn">
                         <li class="nav-item">
                             <span class="nav-link">
                                 <i class="fas fa-user"></i> {{ session('user')->name }}
