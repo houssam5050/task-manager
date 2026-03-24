@@ -43,4 +43,9 @@ class DboardController extends Controller
         ]);
         return redirect('dashboad');
     }
+
+    public function delete($id){
+        DB::table('dashboard')->where('id', $id)->delete();
+        return redirect('dashboard');
+    }
 }
