@@ -28,4 +28,9 @@ class DboardController extends Controller
         ]);
         return redirect('/dashboard');
     }
+
+    public function edit($id){
+        $dboards = DB::table('dashboard')->where('id', $id)->first();
+        return view('edit');
+    }
 }

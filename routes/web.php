@@ -28,3 +28,5 @@ Route::post('store', [DboardController::class, 'store']);
 Route::get('edit', [DboardController::class, 'edit']);
 Route::post('update', [DboardController::class, 'update']);
 Route::get('delete', [DboardController::class, 'delete']);
+
+
