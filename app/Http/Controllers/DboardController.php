@@ -50,12 +50,12 @@ class DboardController extends Controller
             'date' => $request->date,
             'status' => $request->status
         ]);
-        return redirect('dashboad');
+        return redirect('/dashboad');
     }
 
     public function delete($id)
     {
         DB::table('dashboard')->where('id', $id)->delete();
-        return redirect('dashboard');
+        return redirect('/dashboard');
     }
 }
