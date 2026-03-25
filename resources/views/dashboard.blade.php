@@ -16,6 +16,7 @@
         <th>status</th>
         <th>action</th>
     </tr>
+    
     @foreach($dboard as $d)
     <tr>
         <td>{{$d->title}}</td>
