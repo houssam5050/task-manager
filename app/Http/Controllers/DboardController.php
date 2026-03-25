@@ -16,7 +16,7 @@ class DboardController extends Controller
         if (!Session::has('user')) {
             return redirect('login');
         }
-        return view('dashboard');
+        return view('dashboard', compact('dboard'));
     }
 
     public function create()
