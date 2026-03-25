@@ -25,6 +25,9 @@
         <td>
             <a href="/edit/ {{$d->id}}">edit</a>
         </td>
+        <td>
+            <a href="/delete/{{$d->id}}">delete</a>
+        </td>
     </tr>
     @endforeach
 </table>
