@@ -14,8 +14,21 @@
         <th>description</th>
         <th>date</th>
         <th>status</th>
+        <th>action</th>
     </tr>
+    @foreach($dboard as $d)
+    <tr>
+        <td>{{$d->title}}</td>
+        <td>{{$d->description}}</td>
+        <td>{{$d->date}}</td>
+        <td>{{$d->status}}</td>
+        <td>
+            <a href="/edit/ {{$d->id}}">edit</a>
+        </td>
+    </tr>
+    @endforeach
 </table>
+
 <body>
 </body>
 
