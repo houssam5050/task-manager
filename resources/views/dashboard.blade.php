@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>task manager</title>
 </head>
-<x-sidebar></x-sidebar>
+
 
 <table border="1">
     <tr>
@@ -32,6 +32,8 @@
     </tr>
     @endforeach
 </table>
+<br>
+<a href="/create">add mission</a>
 
 <body>
 </body>
