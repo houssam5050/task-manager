@@ -27,7 +27,6 @@ class DboardController extends Controller
     public function store(Request $request)
     {
         DB::table('dashboard')->insert([
-            'id' => $request->id,
             'title' => $request->title,
             'description' => $request->description,
             'date' => $request->date,
@@ -46,11 +45,11 @@ class DboardController extends Controller
     {
         DB::table('dashboard')->where('id', $id)->update([
             'title' => $request->title,
-            'description' => $request->descreption,
+            'description' => $request->description,
             'date' => $request->date,
             'status' => $request->status
         ]);
-        return redirect('/dashboad');
+        return redirect('/dashboard');
     }
 
     public function delete($id)
