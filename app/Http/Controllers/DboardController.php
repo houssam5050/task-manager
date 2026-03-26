@@ -16,7 +16,7 @@ class DboardController extends Controller
         if (!Session::has('user')) {
             return redirect('login');
         }
-        return view('dashboard', compact('dboard'));
+        return view('missions', compact('dboard'));
     }
 
     public function create()
@@ -32,7 +32,7 @@ class DboardController extends Controller
             'date' => $request->date,
             'status' => $request->status
         ]);
-        return redirect('/dashboard');
+        return redirect('/missions');
     }
 
     public function edit($id)
@@ -49,12 +49,16 @@ class DboardController extends Controller
             'date' => $request->date,
             'status' => $request->status
         ]);
-        return redirect('/dashboard');
+        return redirect('/missions');
     }
 
     public function delete($id)
     {
         DB::table('dashboard')->where('id', $id)->delete();
-        return redirect('/dashboard');
+        return redirect('/missions');
+    }
+
+    public function missions(){
+        return view('missions');
     }
 }
