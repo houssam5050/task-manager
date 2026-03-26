@@ -23,10 +23,10 @@ Route::post('logout', [UserController::class, 'logout']);
 //dashboad
 
 Route::get('dashboard', [DboardController::class, 'dashboard']);
-Route::get('create', [DboardController::class, 'create']);
-Route::post('store', [DboardController::class, 'store']);
-Route::get('edit/{id}', [DboardController::class, 'edit']);
-Route::post('update/{id}', [DboardController::class, 'update']);
-Route::get('delete/{id}', [DboardController::class, 'delete']);
+Route::get('/create', [DboardController::class, 'create']);
+Route::post('/store', [DboardController::class, 'store']);
+Route::get('/edit/{id}', [DboardController::class, 'edit']);
+Route::post('/update/{id}', [DboardController::class, 'update']);
+Route::get('/delete/{id}', [DboardController::class, 'delete']);
 
 
