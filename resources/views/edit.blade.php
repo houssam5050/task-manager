@@ -10,7 +10,7 @@
         @csrf
         <input type="text" name="title" value="{{$dboards->title}}" required><br>
         <input type="text" name="description" value="{{$dboards->description}}" required><br>
-        <input type="date" name="date" value="{{$dboards->date"}} required> <br>
+        <input type="date" name="date" value="{{$dboards->date}}" required> <br>
         <select name="status" required>
             <option value="pending">Pending</option>
             <option value="done">Done</option>
