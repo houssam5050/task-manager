@@ -172,13 +172,13 @@
     
     <ul class="sidebar-nav">
         <li class="nav-item">
-            <a href="#" class="nav-link active" data-page="dashboard">
+            <a href="/dashboard" class="nav-link active" data-page="dashboard">
                 <i class="bi bi-speedometer2"></i>
                 <span>Dashboard</span>
             </a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link" data-page="mission">
+            <a href="/missions" class="nav-link" data-page="mission">
                 <i class="bi bi-rocket-takeoff"></i>
                 <span>Mission</span>
             </a>

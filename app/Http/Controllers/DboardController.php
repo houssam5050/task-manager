@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\session;
 
 class DboardController extends Controller
 {
-    public function dashboard()
+    public function missions()
     {
         $dboard = DB::table('dashboard')->get();
         if (!Session::has('user')) {
@@ -58,7 +58,8 @@ class DboardController extends Controller
         return redirect('/missions');
     }
 
-    public function missions(){
-        return view('missions');
+    public function dahsboard(){
+        return view('dashboard');
     }
+
 }

@@ -6,6 +6,7 @@
     <title>messions</title>
 </head>
 <body>
+    <x-sidebar></x-sidebar>
     <h1>manage your messions</h1>
     <table border="1">
     <tr>
