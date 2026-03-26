@@ -39,7 +39,7 @@ class DboardController extends Controller
     public function edit($id)
     {
         $dboards = DB::table('dashboard')->where('id', $id)->first();
-        return view('edit');
+        return view('edit', compact('dboards'));
     }
 
     public function update(Request $request, $id)
