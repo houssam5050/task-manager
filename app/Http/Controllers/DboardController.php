@@ -58,8 +58,14 @@ class DboardController extends Controller
         return redirect('/missions');
     }
 
-    public function dahsboard(){
-        return view('dashboard');
-    }
+    public function dashboard()
+    {
+        $dboard = DB::table('dashboard')->get();
 
+        if (!Session::has('user')) {
+            return redirect('login');
+        }
+
+        return view('dashboard', compact('dboard'));
+    }
 }
