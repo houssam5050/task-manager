@@ -14,7 +14,6 @@
         <input type="date" name="date" value="{{$dboards->date}}" required> <br>
         <select name="status" required>
             <option value="pending">Pending</option>
-            <option value="done">Done</option>
         </select><br>
         <button type="submit">update</button>
     </form>

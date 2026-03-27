@@ -15,7 +15,6 @@
         <input type="date" name="date" placeholder="date" required><br>
         <select name="status" required>
             <option value="pending">Pending</option>
-            <option value="done">Done</option>
         </select><br>
         
         <button type="submit">save</button>
