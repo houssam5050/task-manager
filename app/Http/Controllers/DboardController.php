@@ -74,7 +74,9 @@ class DboardController extends Controller
 
     public function dashboard()
     {
-        $dboard = DB::table('dashboard')->get();
+        $dboard = DB::table('dashboard')
+            ->where('status', 'pending')
+            ->get();
 
         if (!Session::has('user')) {
             return redirect('login');
