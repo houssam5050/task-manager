@@ -119,7 +119,6 @@
                     <label>Status</label>
                     <select name="status" required>
                         <option value="pending">Pending</option>
-                        <option value="done">Done</option>
                     </select>
                 </div>
 

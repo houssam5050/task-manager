@@ -119,7 +119,6 @@
                     <label>Status</label>
                     <select name="status" required>
                         <option value="pending" {{$dboards->status == 'pending' ? 'selected' : ''}}>Pending</option>
-                        <option value="done" {{$dboards->status == 'done' ? 'selected' : ''}}>Done</option>
                     </select>
                 </div>
 
