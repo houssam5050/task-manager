@@ -16,7 +16,7 @@
             display: flex;
         }
 
-        /* Content beside sidebar */
+        
         .content {
             margin-left: 220px; /* adjust based on sidebar width */
             padding: 30px;
@@ -27,14 +27,14 @@
             margin-bottom: 25px;
         }
 
-        /* Cards container */
+       
         .cards {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
         }
 
-        /* Single card */
+       
         .card {
             flex: 1;
             min-width: 200px;
@@ -74,12 +74,10 @@
 
 <div class="container">
 
-    <!-- Sidebar -->
     <x-sidebar></x-sidebar>
 
-    <!-- Content -->
     <div class="content">
-        <h1>Dashboard</h1>
+        <h1 class="mb-5">Dashboard</h1>
 
         <div class="cards">
             <div class="card total">

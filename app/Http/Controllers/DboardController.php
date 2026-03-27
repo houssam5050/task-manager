@@ -16,6 +16,8 @@ class DboardController extends Controller
             ->where('status', 'pending')
             ->get();
 
+        
+
         if (!Session::has('user')) {
             return redirect('login');
         }
