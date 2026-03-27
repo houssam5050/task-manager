@@ -83,6 +83,21 @@
             border-radius: 6px;
             text-decoration: none;
         }
+
+        select {
+            padding: 6px 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        select option[value="pending"] {
+            color: orange;
+        }
+
+        select option[value="done"] {
+            color: green;
+        }
     </style>
 </head>
 
