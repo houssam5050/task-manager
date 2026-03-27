@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,8 @@
 
         /* Sidebar space */
         .content {
-            margin-left: 220px; /* adjust depending on sidebar width */
+            margin-left: 220px;
+            /* adjust depending on sidebar width */
             padding: 30px;
             width: 100%;
         }
@@ -33,10 +35,11 @@
             background: #fff;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
-        th, td {
+        th,
+        td {
             padding: 12px 15px;
             text-align: left;
         }
@@ -85,44 +88,54 @@
 
 <body>
 
-<div class="container">
-    
-    <!-- Sidebar -->
-    <x-sidebar></x-sidebar>
+    <div class="container">
 
-    <!-- Content -->
-    <div class="content">
-        <h1>Manage Your Missions</h1>
+        <!-- Sidebar -->
+        <x-sidebar></x-sidebar>
 
-        <table>
-            <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Date</th>
-                <th>Status</th>
-                <th colspan="2">Action</th>
-            </tr>
+        <!-- Content -->
+        <div class="content">
+            <h1>Manage Your Missions</h1>
 
-            @foreach($dboard as $d)
-            <tr>
-                <td>{{$d->title}}</td>
-                <td>{{$d->description}}</td>
-                <td>{{$d->date}}</td>
-                <td>{{$d->status}}</td>
-                <td>
-                    <a class="btn btn-edit" href="/edit/{{$d->id}}">Edit</a>
-                </td>
-                <td>
-                    <a class="btn btn-delete" href="/delete/{{$d->id}}">Delete</a>
-                </td>
-            </tr>
-            @endforeach
-        </table>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th colspan="2">Action</th>
+                </tr>
 
-        <a href="/create" class="btn-add">+ Add Mission</a>
+                @foreach($dboard as $d)
+                <tr>
+                    <td>{{$d->title}}</td>
+                    <td>{{$d->description}}</td>
+                    <td>{{$d->date}}</td>
+                    <td>
+                        <form action="/update/{{$d->id}}" method="POST">
+                            @csrf
+
+                            <select name="status" onchange="this.form.submit()">
+                                <option value="pending" {{$d->status == 'pending' ? 'selected' : ''}}>Pending</option>
+                                <option value="done" {{$d->status == 'done' ? 'selected' : ''}}>Done</option>
+                            </select>
+                        </form>
+                    </td>
+                    <td>
+                        <a class="btn btn-edit" href="/edit/{{$d->id}}">Edit</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-delete" href="/delete/{{$d->id}}">Delete</a>
+                    </td>
+                </tr>
+                @endforeach
+            </table>
+
+            <a href="/create" class="btn-add">+ Add Mission</a>
+        </div>
+
     </div>
 
-</div>
-
 </body>
+
 </html>

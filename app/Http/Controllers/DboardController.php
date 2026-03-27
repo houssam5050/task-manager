@@ -41,16 +41,30 @@ class DboardController extends Controller
         return view('edit', compact('dboards'));
     }
 
-    public function update(Request $request, $id)
-    {
-        DB::table('dashboard')->where('id', $id)->update([
-            'title' => $request->title,
-            'description' => $request->description,
-            'date' => $request->date,
-            'status' => $request->status
-        ]);
-        return redirect('/missions');
+   public function update(Request $request, $id)
+{
+    $data = [];
+
+    if ($request->has('title')) {
+        $data['title'] = $request->title;
     }
+
+    if ($request->has('description')) {
+        $data['description'] = $request->description;
+    }
+
+    if ($request->has('date')) {
+        $data['date'] = $request->date;
+    }
+
+    if ($request->has('status')) {
+        $data['status'] = $request->status;
+    }
+
+    DB::table('dashboard')->where('id', $id)->update($data);
+
+    return redirect('/missions');
+}
 
     public function delete($id)
     {
