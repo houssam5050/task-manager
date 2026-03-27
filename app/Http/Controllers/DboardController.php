@@ -12,7 +12,10 @@ class DboardController extends Controller
 {
     public function missions()
     {
-        $dboard = DB::table('dashboard')->get();
+        $dboard = DB::table('dashboard')
+            ->where('status', 'pending')
+            ->get();
+
         if (!Session::has('user')) {
             return redirect('login');
         }
@@ -41,30 +44,30 @@ class DboardController extends Controller
         return view('edit', compact('dboards'));
     }
 
-   public function update(Request $request, $id)
-{
-    $data = [];
+    public function update(Request $request, $id)
+    {
+        $data = [];
 
-    if ($request->has('title')) {
-        $data['title'] = $request->title;
+        if ($request->has('title')) {
+            $data['title'] = $request->title;
+        }
+
+        if ($request->has('description')) {
+            $data['description'] = $request->description;
+        }
+
+        if ($request->has('date')) {
+            $data['date'] = $request->date;
+        }
+
+        if ($request->has('status')) {
+            $data['status'] = $request->status;
+        }
+
+        DB::table('dashboard')->where('id', $id)->update($data);
+
+        return redirect('/missions');
     }
-
-    if ($request->has('description')) {
-        $data['description'] = $request->description;
-    }
-
-    if ($request->has('date')) {
-        $data['date'] = $request->date;
-    }
-
-    if ($request->has('status')) {
-        $data['status'] = $request->status;
-    }
-
-    DB::table('dashboard')->where('id', $id)->update($data);
-
-    return redirect('/missions');
-}
 
     public function delete($id)
     {
@@ -74,14 +77,20 @@ class DboardController extends Controller
 
     public function dashboard()
     {
-        $dboard = DB::table('dashboard')
-            ->where('status', 'pending')
-            ->get();
-
         if (!Session::has('user')) {
             return redirect('login');
         }
 
-        return view('dashboard', compact('dboard'));
+        $total = DB::table('dashboard')->count();
+
+        $done = DB::table('dashboard')
+            ->where('status', 'done')
+            ->count();
+
+        $pending = DB::table('dashboard')
+            ->where('status', 'pending')
+            ->count();
+
+        return view('dashboard', compact('total', 'done', 'pending'));
     }
 }
