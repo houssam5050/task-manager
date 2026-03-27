@@ -6,6 +6,7 @@
     <title>edit</title>
 </head>
 <body>
+    <x-sidebar></x-sidebar>
     <form action="/update/{{$dboards->id}}" method="POST">
         @csrf
         

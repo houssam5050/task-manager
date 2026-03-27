@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <x-sidebar></x-sidebar>
     <form action="/store" method="post">
         @csrf
         <input type="text" name="title" placeholder="title" required><br>
@@ -18,6 +19,7 @@
         </select><br>
         
         <button type="submit">save</button>
+
 
     </form>
 </body>
