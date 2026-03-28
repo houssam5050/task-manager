@@ -83,13 +83,19 @@ class DboardController extends Controller
             return redirect('login');
         }
 
-        $total = DB::table('dashboard')->count();
+        $userId = Session::get('user')->id;
+
+        $total = DB::table('dashboard')
+            ->where('user_id', $userId)
+            ->count();
 
         $done = DB::table('dashboard')
+            ->where('user_id', $userId)
             ->where('status', 'done')
             ->count();
 
         $pending = DB::table('dashboard')
+            ->where('user_id', $userId)
             ->where('status', 'pending')
             ->count();
 
