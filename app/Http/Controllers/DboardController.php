@@ -18,6 +18,7 @@ class DboardController extends Controller
 
         $dboard = DB::table('dashboard')
             ->where('user_id', Session::get('user')->id)
+            ->where('status', 'pending') 
             ->get();
 
         return view('missions', compact('dboard'));
