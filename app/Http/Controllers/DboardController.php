@@ -12,15 +12,14 @@ class DboardController extends Controller
 {
     public function missions()
     {
-        $dboard = DB::table('dashboard')
-            ->where('status', 'pending')
-            ->get();
-
-
-
         if (!Session::has('user')) {
             return redirect('login');
         }
+
+        $dboard = DB::table('dashboard')
+            ->where('user_id', Session::get('user')->id)
+            ->get();
+
         return view('missions', compact('dboard'));
     }
 
