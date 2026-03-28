@@ -198,7 +198,6 @@
     </ul>
 </div>
 
-<!-- Mobile Menu Toggle Button -->
 <button class="menu-toggle" id="menuToggle">
     <i class="bi bi-list"></i> Menu
 </button>
