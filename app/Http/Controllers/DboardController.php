@@ -16,7 +16,7 @@ class DboardController extends Controller
             ->where('status', 'pending')
             ->get();
 
-        
+
 
         if (!Session::has('user')) {
             return redirect('login');
@@ -32,6 +32,7 @@ class DboardController extends Controller
     public function store(Request $request)
     {
         DB::table('dashboard')->insert([
+            'user_id' => Session::get('user')->id,
             'title' => $request->title,
             'description' => $request->description,
             'date' => $request->date,
