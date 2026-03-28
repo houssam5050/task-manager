@@ -105,10 +105,10 @@
 
     <div class="container">
 
-        <!-- Sidebar -->
+        
         <x-sidebar></x-sidebar>
 
-        <!-- Content -->
+        
         <div class="content">
             <h1>Manage Your Missions</h1>
 
