@@ -29,5 +29,6 @@ Route::get('/edit/{id}', [DboardController::class, 'edit']);
 Route::post('/update/{id}', [DboardController::class, 'update']);
 Route::get('/delete/{id}', [DboardController::class, 'delete']);
 Route::get('/missions', [DboardController::class, 'missions']);
+Route::get('/profile', [DboardController::class, 'profile']);
 
 
