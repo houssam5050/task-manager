@@ -100,7 +100,6 @@
             color: #f87171;
         }
 
-        /* Main Content Area */
         .main-content {
             margin-left: 280px;
             padding: 2rem;
@@ -108,7 +107,6 @@
             background: #f8fafc;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .sidebar {
                 transform: translateX(-100%);
@@ -143,7 +141,7 @@
             }
         }
 
-        /* Card Styles */
+        
         .dashboard-card {
             border: none;
             border-radius: 1rem;
@@ -163,7 +161,7 @@
 </head>
 <body>
 
-<!-- Sidebar Component -->
+
 <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
         <h3><i class="bi bi-grid-1x2-fill"></i> MyTask</h3>
@@ -189,12 +187,15 @@
                 <span>Profile</span>
             </a>
         </li>
+        <form action="/logout" method="post">
+            @csrf
         <li class="nav-item logout-item">
-            <a href="#" class="nav-link logout-link" id="logoutBtn">
+            
                 <i class="bi bi-box-arrow-right"></i>
-                <span>Logout</span>
+                <button type="submit">Logout</button>
             </a>
         </li>
+        </form>
     </ul>
 </div>
 
