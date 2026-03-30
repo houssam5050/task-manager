@@ -102,4 +102,9 @@ class DboardController extends Controller
 
         return view('dashboard', compact('total', 'done', 'pending'));
     }
+
+    public function profile(){
+        $dboard = DB::table('dashboard')->get();
+        return view('profile', compact('dboard'));
+    }
 }
