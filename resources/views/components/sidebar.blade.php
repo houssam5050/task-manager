@@ -205,7 +205,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link" data-page="profile">
+                <a href="/profile" class="nav-link" data-page="profile">
                     <i class="bi bi-person-circle"></i>
                     <span>Profile</span>
                 </a>
