@@ -79,11 +79,7 @@
             transform: translateX(5px);
         }
 
-        .nav-link.active {
-            background: rgba(59, 130, 246, 0.3);
-            color: white;
-            border-left: 3px solid #3b82f6;
-        }
+      
 
         .logout-item {
             margin-top: 2rem;
