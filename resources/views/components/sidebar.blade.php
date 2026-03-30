@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,7 +80,7 @@
             transform: translateX(5px);
         }
 
-      
+
 
         .logout-item {
             margin-top: 2rem;
@@ -107,15 +108,15 @@
             .sidebar {
                 transform: translateX(-100%);
             }
-            
+
             .sidebar.active {
                 transform: translateX(0);
             }
-            
+
             .main-content {
                 margin-left: 0;
             }
-            
+
             .menu-toggle {
                 display: block;
                 position: fixed;
@@ -137,7 +138,7 @@
             }
         }
 
-        
+
         .dashboard-card {
             border: none;
             border-radius: 1rem;
@@ -153,52 +154,79 @@
             font-size: 2rem;
             color: #3b82f6;
         }
+
+        .logout-btn {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            color: #f87171;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .logout-btn i {
+            margin-right: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .logout-btn:hover {
+            background: rgba(248, 113, 113, 0.15);
+            color: #fca5a5;
+            transform: translateX(4px);
+        }
     </style>
 </head>
+
 <body>
 
 
-<div class="sidebar" id="sidebar">
-    <div class="sidebar-header">
-        <h3><i class="bi bi-grid-1x2-fill"></i> MyTask</h3>
-        <p>Navigation Menu</p>
-    </div>
-    
-    <ul class="sidebar-nav">
-        <li class="nav-item">
-            <a href="/dashboard" class="nav-link active" data-page="dashboard">
-                <i class="bi bi-speedometer2"></i>
-                <span>Dashboard</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="/missions" class="nav-link" data-page="mission">
-                <i class="bi bi-rocket-takeoff"></i>
-                <span>Mission</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link" data-page="profile">
-                <i class="bi bi-person-circle"></i>
-                <span>Profile</span>
-            </a>
-        </li>
-        <form action="/logout" method="post">
-            @csrf
-        <li class="nav-item logout-item">
-            
-                <i class="bi bi-box-arrow-right"></i>
-                <button type="submit">Logout</button>
-            </a>
-        </li>
-        </form>
-    </ul>
-</div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3><i class="bi bi-grid-1x2-fill"></i> MyTask</h3>
+            <p>Navigation Menu</p>
+        </div>
 
-<button class="menu-toggle" id="menuToggle">
-    <i class="bi bi-list"></i> Menu
-</button>
+        <ul class="sidebar-nav">
+            <li class="nav-item">
+                <a href="/dashboard" class="nav-link active" data-page="dashboard">
+                    <i class="bi bi-speedometer2"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/missions" class="nav-link" data-page="mission">
+                    <i class="bi bi-rocket-takeoff"></i>
+                    <span>Mission</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-page="profile">
+                    <i class="bi bi-person-circle"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li class="nav-item logout-item">
+                <form action="/logout" method="post">
+                    @csrf
+                    <button type="submit" class="nav-link logout-btn">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span>Logout</span>
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle">
+        <i class="bi bi-list"></i> Menu
+    </button>
 
 
 </body>
+
 </html>
