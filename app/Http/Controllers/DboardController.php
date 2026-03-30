@@ -104,7 +104,7 @@ class DboardController extends Controller
     }
 
     public function profile(){
-        $dboard = DB::table('dashboard')->get();
+        $db = DB::table('dashboard')->get();
         return view('profile', compact('dboard'));
     }
 }

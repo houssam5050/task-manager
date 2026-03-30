@@ -10,7 +10,7 @@
 <body>
     <x-sidebar></x-sidebar>
 
-    foreach($dboard as $d)
+    foreach($db as $d)
     <p>{{$d->name}}</p>
     <p>{{$d->email}}</p>
     endforeach
