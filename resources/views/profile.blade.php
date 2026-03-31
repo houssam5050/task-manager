@@ -11,11 +11,7 @@
     
    
 
-    @foreach($db as $d)
-    <p>{{$d->name}}</p>
-    <p>{{$d->email}}</p>
-@endforeach
-
+{{ session('user')->email }}<br>
 {{ session('user')->name }}
 </body>
 
