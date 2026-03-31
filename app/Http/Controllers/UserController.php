@@ -66,9 +66,5 @@ class UserController extends Controller
         Session::forget('user');
         return redirect('login');
     }
-
-        public function profile(){
-        $db = DB::table('dashboard')->get();
-        return view('profile', compact('db'));
-    }
+    
 }

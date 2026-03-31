@@ -8,12 +8,15 @@
 </head>
 
 <body>
-    <x-sidebar></x-sidebar>
+    
+   
 
-    foreach($db as $d)
+    @foreach($db as $d)
     <p>{{$d->name}}</p>
     <p>{{$d->email}}</p>
-    endforeach
+@endforeach
+
+{{ session('user')->name }}
 </body>
 
 </html>
