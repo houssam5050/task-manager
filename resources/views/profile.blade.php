@@ -15,7 +15,7 @@
 
         .container {
             display: flex;
-
+            
         }
 
         /* Sidebar */
@@ -30,7 +30,7 @@
             /* 👈 smaller left padding */
             display: flex;
             margin-left: 500px;
-            margin-bottom: 100px;
+            
         }
 
         .card {
@@ -40,6 +40,7 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             max-width: 400px;
             width: 100%;
+            
         }
 
         .card h2 {
