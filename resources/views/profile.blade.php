@@ -9,10 +9,11 @@
 
 <body>
     
-   
+<x-sidebar></x-sidebar>
 
 {{ session('user')->email }}<br>
-{{ session('user')->name }}
+{{ session('user')->name }}<br>
+{{$total}}
 </body>
 
 </html>

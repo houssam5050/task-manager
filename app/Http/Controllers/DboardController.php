@@ -18,7 +18,7 @@ class DboardController extends Controller
 
         $dboard = DB::table('dashboard')
             ->where('user_id', Session::get('user')->id)
-            ->where('status', 'pending') 
+            ->where('status', 'pending')
             ->get();
 
         return view('missions', compact('dboard'));
@@ -103,8 +103,14 @@ class DboardController extends Controller
         return view('dashboard', compact('total', 'done', 'pending'));
     }
 
-    public function profile(){
+    public function profile()
+    {
+        $userId = Session::get('user')->id;
         $db = DB::table('users')->get();
-        return view('profile', compact('db'));
+        $total = DB::table('dashboard')
+            ->where('user_id', $userId)
+            ->count();
+
+        return view('profile', compact('db', 'total'));
     }
 }
