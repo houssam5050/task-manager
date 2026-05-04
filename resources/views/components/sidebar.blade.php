@@ -1,6 +1,4 @@
 @php
-    $currentPath = request()->path();
-
     $items = [
         [
             'label' => 'Dashboard',
@@ -13,6 +11,12 @@
             'url' => '/missions',
             'icon' => 'bi-list-check',
             'match' => ['missions', 'create', 'edit/*'],
+        ],
+        [
+            'label' => 'Notebook',
+            'url' => '/notebook',
+            'icon' => 'bi-calendar2-week',
+            'match' => ['notebook'],
         ],
         [
             'label' => 'Profile',
@@ -31,8 +35,11 @@
             <i class="bi bi-check2-square"></i>
         </div>
         <div>
+            
             <h3>MyTask</h3>
+            
             <p>Plan your day</p>
+            
         </div>
     </div>
 

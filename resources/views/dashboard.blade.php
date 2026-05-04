@@ -74,7 +74,7 @@
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 18px;
             margin-bottom: 24px;
         }
@@ -151,6 +151,11 @@
         .pending-card {
             --card-color: #d97706;
             --card-soft: #fef3c7;
+        }
+
+        .notebook-card {
+            --card-color: #0f766e;
+            --card-soft: #ccfbf1;
         }
 
         .dashboard-panel {
@@ -296,6 +301,15 @@
                         <p class="stat-value">{{ $pending }}</p>
                         <p class="stat-note">Waiting for your next move</p>
                     </article>
+
+                    <article class="stat-card notebook-card">
+                        <div class="stat-top">
+                            <h2>Worked Days</h2>
+                            <span class="stat-icon"><i class="bi bi-calendar2-check"></i></span>
+                        </div>
+                        <p class="stat-value">{{ $workedDays }}</p>
+                        <p class="stat-note">{{ $workedThisMonth }} marked this month</p>
+                    </article>
                 </section>
 
                 <section class="dashboard-panel">
@@ -309,6 +323,7 @@
                             <div class="progress-fill"></div>
                         </div>
                         <p class="stat-note">Completed missions update this progress automatically.</p>
+                        <p class="stat-note">Last worked day: {{ $lastWorkedDayLabel }}</p>
                     </div>
 
                     <div class="panel-box">
@@ -320,6 +335,10 @@
                             </a>
                             <a href="/profile" class="quick-link">
                                 <span><i class="bi bi-person-circle"></i> Open Profile</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                            <a href="/notebook" class="quick-link">
+                                <span><i class="bi bi-calendar2-week"></i> Open Notebook</span>
                                 <i class="bi bi-arrow-right"></i>
                             </a>
                         </div>
